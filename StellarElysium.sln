@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36623.8 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StellarElysium.WebApi", "StellarElysium.WebApi\StellarElysium.WebApi.csproj", "{F81D76D8-36B4-4D23-8DD0-45F62E42565E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StellarElysium.Application", "StellarElysium.Application\StellarElysium.Application.csproj", "{4AF5EC4B-C9A7-49E4-9794-3FC204C1BCB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StellarElysium.Domain", "StellarElysium.Domain\StellarElysium.Domain.csproj", "{316AD9E6-AD94-4233-A552-CE385354BACB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StellarElysium.Infrastructure", "StellarElysium.Infrastructure\StellarElysium.Infrastructure.csproj", "{997A99A5-B455-4221-9036-6758A8952AD7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F81D76D8-36B4-4D23-8DD0-45F62E42565E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F81D76D8-36B4-4D23-8DD0-45F62E42565E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F81D76D8-36B4-4D23-8DD0-45F62E42565E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F81D76D8-36B4-4D23-8DD0-45F62E42565E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AF5EC4B-C9A7-49E4-9794-3FC204C1BCB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AF5EC4B-C9A7-49E4-9794-3FC204C1BCB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AF5EC4B-C9A7-49E4-9794-3FC204C1BCB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AF5EC4B-C9A7-49E4-9794-3FC204C1BCB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{316AD9E6-AD94-4233-A552-CE385354BACB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{316AD9E6-AD94-4233-A552-CE385354BACB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{316AD9E6-AD94-4233-A552-CE385354BACB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{316AD9E6-AD94-4233-A552-CE385354BACB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{997A99A5-B455-4221-9036-6758A8952AD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{997A99A5-B455-4221-9036-6758A8952AD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{997A99A5-B455-4221-9036-6758A8952AD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{997A99A5-B455-4221-9036-6758A8952AD7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

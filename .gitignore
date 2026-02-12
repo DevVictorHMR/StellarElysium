@@ -1,0 +1,36 @@
+﻿# Build outputs
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider / VS / VS Code
+.idea/
+.vs/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+
+# Logs
+*.log
+
+# NuGet
+*.nupkg
+# ReSharper
+_ReSharper*/
+
+# Coverage
+coverage/
+coverage.*
+
+# JetBrains
+*.DotSettings.user
