@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using StellarElysium.Domain.Entities;
+using StellarElysium.Domain.Entities.Wishes;
 
 namespace StellarElysium.Infrastructure.Persistence;
 
@@ -8,43 +8,43 @@ public sealed class AppDbContext(
     DbContextOptions<AppDbContext> options,
     ILogger<AppDbContext> logger) : DbContext(options)
 {
-    public DbSet<ContaGenshin> ContasGenshin => Set<ContaGenshin>();
-    public DbSet<Desejo> Desejos => Set<Desejo>();
+    public DbSet<GenshinAccount> GenshinAccounts => Set<GenshinAccount>();
+    public DbSet<Wish> Wishes => Set<Wish>();
 
     public override int SaveChanges()
     {
-        LogarAlteracoes();
+        LogChanges();
         return base.SaveChanges();
     }
 
     public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
     {
-        LogarAlteracoes();
+        LogChanges();
         return base.SaveChangesAsync(cancellationToken);
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<ContaGenshin>()
-            .HasMany(conta => conta.Desejos)
-            .WithOne(desejo => desejo.ContaGenshin)
-            .HasForeignKey(desejo => desejo.ContaGenshinId);
+        modelBuilder.Entity<GenshinAccount>()
+            .HasMany(account => account.Wishes)
+            .WithOne(wish => wish.GenshinAccount)
+            .HasForeignKey(wish => wish.GenshinAccountId);
 
-        modelBuilder.Entity<Desejo>()
-            .HasIndex(desejo => new { desejo.ContaGenshinId, desejo.PullId })
+        modelBuilder.Entity<Wish>()
+            .HasIndex(wish => new { wish.GenshinAccountId, wish.PullId })
             .IsUnique();
 
-        modelBuilder.Entity<Desejo>()
-            .HasIndex(desejo => new { desejo.ContaGenshinId, desejo.GachaType, desejo.DataHoraDesejo });
+        modelBuilder.Entity<Wish>()
+            .HasIndex(wish => new { wish.GenshinAccountId, wish.GachaType, wish.WishTime });
 
-        modelBuilder.Entity<ContaGenshin>()
-            .HasIndex(conta => new { conta.Uid, conta.Servidor })
+        modelBuilder.Entity<GenshinAccount>()
+            .HasIndex(account => new { account.Uid, account.Server })
             .IsUnique();
 
         base.OnModelCreating(modelBuilder);
     }
 
-    private void LogarAlteracoes()
+    private void LogChanges()
     {
         if (!ChangeTracker.HasChanges())
         {
@@ -57,7 +57,7 @@ public sealed class AppDbContext(
 
         if (total > 0)
         {
-            logger.LogInformation("Persistindo {Total} alteracoes no banco.", total);
+            logger.LogInformation("Persisting {Total} database changes.", total);
         }
     }
 }

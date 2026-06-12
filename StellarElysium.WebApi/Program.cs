@@ -16,7 +16,7 @@ if (app.Environment.IsDevelopment())
     app.MapGet("/", () => Results.Redirect("/swagger"));
 }
 
-app.Logger.LogInformation("API iniciada. Ambiente: {Ambiente}", app.Environment.EnvironmentName);
+app.Logger.LogInformation("API started. Environment: {Environment}", app.Environment.EnvironmentName);
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
