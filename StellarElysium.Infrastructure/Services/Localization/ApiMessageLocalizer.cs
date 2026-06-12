@@ -22,7 +22,11 @@ public sealed class ApiMessageLocalizer : IApiMessageLocalizer
                 [ApiMessageKey.WishUrlImportSucceeded] = "Histórico de desejos importado pela URL com sucesso.",
                 [ApiMessageKey.WishesListedSucceeded] = "Histórico de desejos consultado com sucesso.",
                 [ApiMessageKey.PitySummaryRetrieved] = "Resumo de pity consultado com sucesso.",
-                [ApiMessageKey.PityDetailRetrieved] = "Detalhe de pity consultado com sucesso."
+                [ApiMessageKey.PityDetailRetrieved] = "Detalhe de pity consultado com sucesso.",
+                [ApiMessageKey.CharactersRetrieved] = "Personagens consultados com sucesso.",
+                [ApiMessageKey.CharactersCreated] = "Personagens cadastrados com sucesso.",
+                [ApiMessageKey.CharactersUpdated] = "Personagens atualizados com sucesso.",
+                [ApiMessageKey.CharactersDeleted] = "Personagens removidos com sucesso."
             },
             [SupportedLanguage.English] = new Dictionary<ApiMessageKey, string>
             {
@@ -36,7 +40,11 @@ public sealed class ApiMessageLocalizer : IApiMessageLocalizer
                 [ApiMessageKey.WishUrlImportSucceeded] = "Wish history imported from URL successfully.",
                 [ApiMessageKey.WishesListedSucceeded] = "Wish history retrieved successfully.",
                 [ApiMessageKey.PitySummaryRetrieved] = "Pity summary retrieved successfully.",
-                [ApiMessageKey.PityDetailRetrieved] = "Pity detail retrieved successfully."
+                [ApiMessageKey.PityDetailRetrieved] = "Pity detail retrieved successfully.",
+                [ApiMessageKey.CharactersRetrieved] = "Characters retrieved successfully.",
+                [ApiMessageKey.CharactersCreated] = "Characters created successfully.",
+                [ApiMessageKey.CharactersUpdated] = "Characters updated successfully.",
+                [ApiMessageKey.CharactersDeleted] = "Characters deleted successfully."
             },
             [SupportedLanguage.Spanish] = new Dictionary<ApiMessageKey, string>
             {
@@ -50,7 +58,11 @@ public sealed class ApiMessageLocalizer : IApiMessageLocalizer
                 [ApiMessageKey.WishUrlImportSucceeded] = "Historial de deseos importado desde la URL correctamente.",
                 [ApiMessageKey.WishesListedSucceeded] = "Historial de deseos consultado correctamente.",
                 [ApiMessageKey.PitySummaryRetrieved] = "Resumen de pity consultado correctamente.",
-                [ApiMessageKey.PityDetailRetrieved] = "Detalle de pity consultado correctamente."
+                [ApiMessageKey.PityDetailRetrieved] = "Detalle de pity consultado correctamente.",
+                [ApiMessageKey.CharactersRetrieved] = "Personajes consultados correctamente.",
+                [ApiMessageKey.CharactersCreated] = "Personajes registrados correctamente.",
+                [ApiMessageKey.CharactersUpdated] = "Personajes actualizados correctamente.",
+                [ApiMessageKey.CharactersDeleted] = "Personajes eliminados correctamente."
             }
         };
 

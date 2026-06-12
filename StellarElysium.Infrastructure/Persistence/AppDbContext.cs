@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using StellarElysium.Domain.Entities.Characters;
 using StellarElysium.Domain.Entities.Wishes;
 
 namespace StellarElysium.Infrastructure.Persistence;
@@ -10,6 +11,7 @@ public sealed class AppDbContext(
 {
     public DbSet<GenshinAccount> GenshinAccounts => Set<GenshinAccount>();
     public DbSet<Wish> Wishes => Set<Wish>();
+    public DbSet<Character> Characters => Set<Character>();
 
     public override int SaveChanges()
     {
@@ -39,6 +41,10 @@ public sealed class AppDbContext(
 
         modelBuilder.Entity<GenshinAccount>()
             .HasIndex(account => new { account.Uid, account.Server })
+            .IsUnique();
+
+        modelBuilder.Entity<Character>()
+            .HasIndex(character => character.Name)
             .IsUnique();
 
         base.OnModelCreating(modelBuilder);

@@ -12,5 +12,9 @@ public enum ApiMessageKey
     WishUrlImportSucceeded = 201,
     WishesListedSucceeded = 202,
     PitySummaryRetrieved = 203,
-    PityDetailRetrieved = 204
+    PityDetailRetrieved = 204,
+    CharactersRetrieved = 300,
+    CharactersCreated = 301,
+    CharactersUpdated = 302,
+    CharactersDeleted = 303
 }

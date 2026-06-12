@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json.Serialization;
 using StellarElysium.Application.Interfaces.Localization;
 using StellarElysium.Domain.Dtos.Shared;
 using StellarElysium.Domain.Enums.Localization;
@@ -9,7 +10,11 @@ using StellarElysium.WebApi.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+    });
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IRequestLanguageProvider, RequestLanguageProvider>();
 builder.Services.Configure<ApiBehaviorOptions>(options =>
