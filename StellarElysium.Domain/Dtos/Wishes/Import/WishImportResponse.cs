@@ -1,6 +1,8 @@
+using StellarElysium.Domain.Dtos.Shared;
+
 namespace StellarElysium.Domain.Dtos.Wishes.Import;
 
-public class WishImportResponse
+public class WishImportResponse : LocalizedResponse
 {
     public Guid GenshinAccountId { get; set; }
     public int TotalReceived { get; set; }

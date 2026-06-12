@@ -34,7 +34,7 @@ public sealed class WishRepository(
             .Select(wish => wish.PullId)
             .ToListAsync(cancellationToken);
 
-        logger.LogInformation("PullIds existing encontrados: {Total}", existing.Count);
+        logger.LogInformation("Existing pull ids found: {Total}", existing.Count);
 
         return existing.ToHashSet(StringComparer.Ordinal);
     }

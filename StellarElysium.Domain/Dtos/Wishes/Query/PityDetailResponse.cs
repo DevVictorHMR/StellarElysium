@@ -1,6 +1,8 @@
+using StellarElysium.Domain.Dtos.Shared;
+
 namespace StellarElysium.Domain.Dtos.Wishes.Query;
 
-public class PityDetailResponse
+public class PityDetailResponse : LocalizedResponse
 {
     public Guid GenshinAccountId { get; set; }
     public List<PityBannerDetailResponse> Banners { get; set; } = new();

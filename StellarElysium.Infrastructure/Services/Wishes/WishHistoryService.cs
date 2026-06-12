@@ -4,6 +4,8 @@ using System.Text.Json.Serialization;
 using Microsoft.Extensions.Logging;
 using StellarElysium.Application.Interfaces.Services.Wishes;
 using StellarElysium.Domain.Dtos.Wishes.Import;
+using StellarElysium.Domain.Enums.Localization;
+using StellarElysium.Domain.Exceptions;
 
 namespace StellarElysium.Infrastructure.Services.Wishes;
 
@@ -21,7 +23,7 @@ public sealed class WishHistoryService(
     {
         if (!Uri.TryCreate(url, UriKind.Absolute, out var uri))
         {
-            throw new InvalidOperationException("Invalid history URL.");
+            throw new LocalizedApiException(ApiMessageKey.InvalidHistoryUrl);
         }
 
         var baseUri = new UriBuilder(uri);
@@ -33,7 +35,7 @@ public sealed class WishHistoryService(
         var baseParameters = ParseQuery(baseUri.Query);
         if (!baseParameters.TryGetValue("authkey", out var authkey) || string.IsNullOrWhiteSpace(authkey))
         {
-            throw new InvalidOperationException("History URL is missing authkey.");
+            throw new LocalizedApiException(ApiMessageKey.HistoryUrlMissingAuthkey);
         }
 
         if (string.IsNullOrWhiteSpace(GetParameter(baseParameters, "lang")))

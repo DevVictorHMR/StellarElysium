@@ -1,12 +1,14 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using StellarElysium.Application.Interfaces.Localization;
 using StellarElysium.Application.Interfaces.Providers;
 using StellarElysium.Application.Interfaces.Repositories.Wishes;
 using StellarElysium.Application.Interfaces.Services.Wishes;
 using StellarElysium.Infrastructure.Mappers.Wishes;
 using StellarElysium.Infrastructure.Persistence;
 using StellarElysium.Infrastructure.Repositories.Wishes;
+using StellarElysium.Infrastructure.Services.Localization;
 using StellarElysium.Infrastructure.Services.Wishes;
 using StellarElysium.Infrastructure.Providers;
 
@@ -17,6 +19,7 @@ public static class DependencyInjection
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
+        services.AddSingleton<IApiMessageLocalizer, ApiMessageLocalizer>();
         services.AddSingleton<WishesMapper>();
         services.AddScoped<IGenshinAccountRepository, GenshinAccountRepository>();
         services.AddScoped<IWishRepository, WishRepository>();
