@@ -39,7 +39,7 @@ public sealed class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbConte
         var connectionString = configuration.GetConnectionString("Default");
         if (string.IsNullOrWhiteSpace(connectionString))
         {
-            throw new InvalidOperationException("A connection string 'Default' não foi configurada.");
+            throw new InvalidOperationException("The connection string 'Default' was not configured.");
         }
 
         var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
