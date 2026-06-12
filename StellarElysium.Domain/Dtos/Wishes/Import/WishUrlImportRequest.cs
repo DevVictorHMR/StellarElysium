@@ -3,7 +3,7 @@ using StellarElysium.Domain.Dtos.Wishes.Accounts;
 
 namespace StellarElysium.Domain.Dtos.Wishes.Import;
 
-public class WishUrlImportRequest
+public record WishUrlImportRequest
 {
     [Required]
     public GenshinAccountRequest Account { get; set; } = new();

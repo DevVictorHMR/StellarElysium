@@ -1,6 +1,6 @@
 namespace StellarElysium.Domain.Dtos.Characters.Common;
 
-public class CharacterProfileLocalizationDto
+public record CharacterProfileLocalizationDto
 {
     public string Name { get; set; } = string.Empty;
     public string? Title { get; set; }

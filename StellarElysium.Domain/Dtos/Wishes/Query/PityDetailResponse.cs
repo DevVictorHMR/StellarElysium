@@ -2,13 +2,13 @@ using StellarElysium.Domain.Dtos.Shared;
 
 namespace StellarElysium.Domain.Dtos.Wishes.Query;
 
-public class PityDetailResponse : LocalizedResponse
+public record PityDetailResponse : LocalizedResponse
 {
     public Guid GenshinAccountId { get; set; }
     public List<PityBannerDetailResponse> Banners { get; set; } = new();
 }
 
-public class PityBannerDetailResponse
+public record PityBannerDetailResponse
 {
     public int GachaType { get; set; }
     public int FiveStarPity { get; set; }

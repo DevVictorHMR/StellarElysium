@@ -1,6 +1,6 @@
 namespace StellarElysium.Domain.Dtos.Characters.Common;
 
-public class CharacterSkillScalingDto
+public record CharacterSkillScalingDto
 {
     public string LabelKey { get; set; } = string.Empty;
     public Dictionary<string, CharacterSkillScalingLocalizationDto> Localizations { get; set; } = new();

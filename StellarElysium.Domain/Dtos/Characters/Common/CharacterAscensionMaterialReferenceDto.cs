@@ -1,6 +1,6 @@
 namespace StellarElysium.Domain.Dtos.Characters.Common;
 
-public class CharacterAscensionMaterialReferenceDto
+public record CharacterAscensionMaterialReferenceDto
 {
     public Guid? AscensionMaterialId { get; set; }
     public string? MaterialSlug { get; set; }

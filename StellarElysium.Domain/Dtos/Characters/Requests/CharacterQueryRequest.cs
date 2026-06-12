@@ -1,6 +1,6 @@
 namespace StellarElysium.Domain.Dtos.Characters.Requests;
 
-public class CharacterQueryRequest
+public record CharacterQueryRequest
 {
     public List<string> Names { get; set; } = new();
     public string? Search { get; set; }

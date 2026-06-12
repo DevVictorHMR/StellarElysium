@@ -2,7 +2,7 @@ using StellarElysium.Domain.Enums.Wishes;
 
 namespace StellarElysium.Domain.Dtos.Wishes.Accounts;
 
-public class GenshinAccountResponse
+public record GenshinAccountResponse
 {
     public Guid Id { get; set; }
     public string Uid { get; set; } = string.Empty;

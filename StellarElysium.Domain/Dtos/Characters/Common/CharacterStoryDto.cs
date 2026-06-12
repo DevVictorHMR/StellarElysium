@@ -1,6 +1,6 @@
 namespace StellarElysium.Domain.Dtos.Characters.Common;
 
-public class CharacterStoryDto
+public record CharacterStoryDto
 {
     public string StoryKey { get; set; } = string.Empty;
     public int SortOrder { get; set; }

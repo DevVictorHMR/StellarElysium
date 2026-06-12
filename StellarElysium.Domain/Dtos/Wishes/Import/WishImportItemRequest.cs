@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace StellarElysium.Domain.Dtos.Wishes.Import;
 
-public class WishImportItemRequest
+public record WishImportItemRequest
 {
     [Required]
     [MaxLength(50)]

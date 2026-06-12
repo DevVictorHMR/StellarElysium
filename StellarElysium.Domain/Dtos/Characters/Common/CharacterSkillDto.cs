@@ -2,7 +2,7 @@ using StellarElysium.Domain.Enums.Characters;
 
 namespace StellarElysium.Domain.Dtos.Characters.Common;
 
-public class CharacterSkillDto
+public record CharacterSkillDto
 {
     public string SkillKey { get; set; } = string.Empty;
     public CharacterSkillType Type { get; set; } = CharacterSkillType.Other;

@@ -2,7 +2,7 @@ using StellarElysium.Domain.Enums.Characters;
 
 namespace StellarElysium.Domain.Dtos.Characters.Common;
 
-public class CharacterGalleryItemDto
+public record CharacterGalleryItemDto
 {
     public string AssetKey { get; set; } = string.Empty;
     public CharacterGalleryItemType Type { get; set; } = CharacterGalleryItemType.Other;

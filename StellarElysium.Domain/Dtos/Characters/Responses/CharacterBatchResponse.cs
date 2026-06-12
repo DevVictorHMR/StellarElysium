@@ -2,7 +2,7 @@ using StellarElysium.Domain.Dtos.Shared;
 
 namespace StellarElysium.Domain.Dtos.Characters.Responses;
 
-public class CharacterBatchResponse : LocalizedResponse
+public record CharacterBatchResponse : LocalizedResponse
 {
     public int TotalReceived { get; set; }
     public int Created { get; set; }

@@ -1,6 +1,6 @@
 namespace StellarElysium.Domain.Dtos.Characters.Common;
 
-public class CharacterStatDto
+public record CharacterStatDto
 {
     public int Level { get; set; }
     public int AscensionPhase { get; set; }

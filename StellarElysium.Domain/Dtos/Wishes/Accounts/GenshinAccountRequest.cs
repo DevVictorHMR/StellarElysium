@@ -3,7 +3,7 @@ using StellarElysium.Domain.Enums.Wishes;
 
 namespace StellarElysium.Domain.Dtos.Wishes.Accounts;
 
-public class GenshinAccountRequest
+public record GenshinAccountRequest
 {
     [Required]
     [MaxLength(20)]

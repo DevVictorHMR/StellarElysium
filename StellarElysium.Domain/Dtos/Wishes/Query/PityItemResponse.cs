@@ -1,6 +1,6 @@
 namespace StellarElysium.Domain.Dtos.Wishes.Query;
 
-public class PityItemResponse
+public record PityItemResponse
 {
     public string ItemName { get; set; } = string.Empty;
     public int RankType { get; set; }

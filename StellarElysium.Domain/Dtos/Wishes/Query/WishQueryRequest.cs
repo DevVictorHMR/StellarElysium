@@ -4,7 +4,7 @@ using StellarElysium.Domain.Enums.Wishes;
 
 namespace StellarElysium.Domain.Dtos.Wishes.Query;
 
-public class WishQueryRequest
+public record WishQueryRequest
 {
     [Required]
     public Guid GenshinAccountId { get; set; }

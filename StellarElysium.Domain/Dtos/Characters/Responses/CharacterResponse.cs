@@ -2,7 +2,7 @@ using StellarElysium.Domain.Dtos.Characters.Common;
 
 namespace StellarElysium.Domain.Dtos.Characters.Responses;
 
-public class CharacterResponse
+public record CharacterResponse
 {
     public Guid Id { get; set; }
     public string Name { get; set; } = string.Empty;

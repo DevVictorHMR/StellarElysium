@@ -1,6 +1,6 @@
 namespace StellarElysium.Domain.Dtos.Wishes.Query;
 
-public class WishResponse
+public record WishResponse
 {
     public Guid Id { get; set; }
     public Guid GenshinAccountId { get; set; }

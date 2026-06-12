@@ -1,6 +1,6 @@
 namespace StellarElysium.Domain.Dtos.Characters.Common;
 
-public class CharacterSoundDto
+public record CharacterSoundDto
 {
     public string SoundKey { get; set; } = string.Empty;
     public string? Category { get; set; }

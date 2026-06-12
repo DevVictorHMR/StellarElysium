@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace StellarElysium.Domain.Dtos.Wishes.Requests;
 
-public class WishRequest
+public record WishRequest
 {
     [Required]
     public Guid GenshinAccountId { get; set; }

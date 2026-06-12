@@ -1,6 +1,6 @@
 namespace StellarElysium.Domain.Dtos.Characters.Common;
 
-public class CharacterVoiceActorsDto
+public record CharacterVoiceActorsDto
 {
     public string? Chinese { get; set; }
     public string? Japanese { get; set; }

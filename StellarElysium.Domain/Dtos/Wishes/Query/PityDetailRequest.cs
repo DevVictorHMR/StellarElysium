@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace StellarElysium.Domain.Dtos.Wishes.Query;
 
-public class PityDetailRequest
+public record PityDetailRequest
 {
     [Required]
     public Guid GenshinAccountId { get; set; }

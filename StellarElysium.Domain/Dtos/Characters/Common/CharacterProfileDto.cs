@@ -2,7 +2,7 @@ using StellarElysium.Domain.Enums.Characters;
 
 namespace StellarElysium.Domain.Dtos.Characters.Common;
 
-public class CharacterProfileDto
+public record CharacterProfileDto
 {
     public int Rarity { get; set; }
     public CharacterElement Element { get; set; } = CharacterElement.Unknown;

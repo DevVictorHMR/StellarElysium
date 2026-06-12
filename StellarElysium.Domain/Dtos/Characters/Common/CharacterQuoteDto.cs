@@ -1,6 +1,6 @@
 namespace StellarElysium.Domain.Dtos.Characters.Common;
 
-public class CharacterQuoteDto
+public record CharacterQuoteDto
 {
     public string QuoteKey { get; set; } = string.Empty;
     public string? SoundKey { get; set; }

@@ -1,6 +1,6 @@
 namespace StellarElysium.Domain.Dtos.Characters.Common;
 
-public class CharacterMediaLocalizationDto
+public record CharacterMediaLocalizationDto
 {
     public string? Title { get; set; }
     public string? Description { get; set; }

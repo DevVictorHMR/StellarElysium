@@ -3,7 +3,7 @@ using StellarElysium.Domain.Dtos.Characters.Common;
 
 namespace StellarElysium.Domain.Dtos.Characters.Requests;
 
-public class CharacterRequest
+public record CharacterRequest
 {
     public Guid? Id { get; set; }
 

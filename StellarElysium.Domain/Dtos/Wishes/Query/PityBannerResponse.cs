@@ -1,6 +1,6 @@
 namespace StellarElysium.Domain.Dtos.Wishes.Query;
 
-public class PityBannerResponse
+public record PityBannerResponse
 {
     public int GachaType { get; set; }
     public int Total { get; set; }

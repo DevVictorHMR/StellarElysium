@@ -1,6 +1,6 @@
 namespace StellarElysium.Domain.Dtos.Characters.Common;
 
-public class CharacterSkillAscensionDto
+public record CharacterSkillAscensionDto
 {
     public string SkillKey { get; set; } = string.Empty;
     public int TargetLevel { get; set; }
